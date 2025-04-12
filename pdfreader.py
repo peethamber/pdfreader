@@ -23,4 +23,4 @@ if selected_file_path and selected_file_path.lower().endswith('.pdf'):
     with st.status("Loading File.."):
         pdf_viewer(selected_file_path,width="90%")
 else:
-    st.werite(" Choose a PDF File to View")
+    st.write(" Choose a PDF File to View")
