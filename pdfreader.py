@@ -18,5 +18,9 @@ def file_selector(folder_path='.'):
 
 st.title("View Lesson Files")
 selected_file_path = file_selector()
-if selected_file_path and selected_file_path.endswith('.Pdf'):
-    pdf_viewer(selected_file_path)
+
+if selected_file_path and selected_file_path.lower().endswith('.pdf'):
+    with st.status("Loading File.."):
+        pdf_viewer(selected_file_path,width="90%")
+else:
+    st.werite(" Choose a PDF File to View")
