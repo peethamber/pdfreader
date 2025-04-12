@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
+import os
 
 def file_selector(folder_path='.'):
     filenames = os.listdir(folder_path)
